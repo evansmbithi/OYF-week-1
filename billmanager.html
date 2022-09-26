@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bill Manager</title>
     <link rel="stylesheet" href="style.css">
+    <script src="taxcalculator.js" type="module"></script>
+    <script src="billmanager.js" type="module"></script>
 </head>
 <body>
        
-  <div class = 'Nav'>
+  <header class = 'Nav'>
     <div class="logo">
       <img src="https://natujenge.ke/assets/images/logo-wordmark.svg" alt="logo" />
     </div >
     <div class = 'about'>
       <a href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm">About Bootcamp</a>
     </div>
-    </div>
+  </header>
 
             <ul class="links">
 
@@ -27,12 +29,12 @@
             </div>
 
 
-    <header class='Bills'>
+    <main class='Bills'>
        
         <div class='net-income'>
             <h1>Bill Manager</h1>
         <label >Net Salary</label>
-       <input type='text' name = 'text' amount = 'Ksh' ></input>  <br></br>  <br></br>
+       <input type='text' id="net_salary" name = 'text' amount = 'Ksh' value="" ></input>  <br></br>  <br></br>
 
        </div>
 
@@ -59,7 +61,7 @@
  <div class='total-expenses'> 
  <input type='text' name = 'number' amount = 'Ksh' ></input>  <br></br>  <br></br>
 
- <input type=text' name = 'number' amount = 'Ksh' ></input>  <br></br>  <br></br>
+ <input type='text' name = 'number' amount = 'Ksh' ></input>  <br></br>  <br></br>
     </div>
           <button class='add' onClick='add'>Add</button>
 
@@ -68,10 +70,7 @@
      <input type='text' name = 'text' amount = 'Ksh' ></input>  <br></br>  <br></br>
      </div>
 
- </header>
-
- <script src="taxcalculator.js" type="module"></script>
-<script src="billmanager.js" type="module"></script>
+    </main>
     
 </body>
 </html>

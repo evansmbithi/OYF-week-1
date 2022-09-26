@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tax calculator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="taxcalculator.js" type="module"></script>
+    <script src="billmanager.js" type="module"></script>
 </head>
 <body>
            
@@ -20,8 +22,8 @@
   </header>    
 
         <ul class="links">
-          <li><a href="taxcalculator.html">Tax Calculator</a></li>
-          <li><a href="billmanager.html">Bill Manager</a></li>
+          <li><a href="#deductions-pane">Tax Calculator</a></li>
+          <li><a href="#bills-pane">Bill Manager</a></li>
       
         </ul>
 
@@ -32,7 +34,9 @@
           <input type='text' id="gross" name = 'text' amount = 'Ksh' ></input>  <br></br>  <br></br>
   
           </div>
-  
+
+      <div class="main-area">
+      <div id="deductions-pane" class="deductions-pane">
         <div class='Deductions' >
           <label >Netpay</label>
           <input type='text' id="netpay" name = 'text' placeholder='Ksh' amount='Ksh' value=""></input> <br></br> <br></br>
@@ -58,14 +62,57 @@
           <label >NHIF Contribution</label>
           <input type='text' id="nhif" name = 'text' placeholder='Ksh' amount='Ksh' value="1000" disabled></input>    <br></br>  <br></br>
   
-          <button class="btn"><a href='billmanager.html' >Manage bills</a></button>
+          <button class="btn"><a href='#bills-pane' >Manage bills</a></button>
   
           </div>
-  
-        </main>
+          </div>
 
-          <script src="taxcalculator.js" type="module"></script>
-          <script src="billmanager.js" type="module"></script>
-    
+          <div class="bills-pane" id="bills-pane">
+            <div class='Bills'>
+       
+              <div class='net-income'>
+                  <h1>Bill Manager</h1>
+              <label >Net Salary</label>
+             <input type='text' id="net_salary" name = 'text' amount = 'Ksh' value="" ></input>  <br></br>  <br></br>
+      
+             </div>
+      
+              <div class='Expenses' >
+      
+               <label >Travel</label>
+      
+       <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input> <br></br> <br></br>
+      
+       <label >Rent</label>
+       <input type='text' name = 'text' placeholder='Ksh' amount= 'Ksh' ></input>  <br></br>  <br></br>
+      
+       <label >Entertainment</label>
+       <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
+      
+       <label >Food</label>
+       <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
+      
+       <label >Shooping</label>
+       <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
+      
+       </div>
+      
+       <div class='total-expenses'> 
+       <input type='text' name = 'number' amount = 'Ksh' ></input>  <br></br>  <br></br>
+      
+       <input type='text' name = 'number' amount = 'Ksh' ></input>  <br></br>  <br></br>
+          </div>
+                <button class='add' onClick='add'>Add</button>
+      
+                  <div class='balance'>
+                <label >Balance</label>
+           <input type='text' name = 'text' amount = 'Ksh' ></input>  <br></br>  <br></br>
+           </div>
+      
+          </div>
+
+          </div>
+          </div>
+        </main>    
 </body>
 </html>
