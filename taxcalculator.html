@@ -9,7 +9,7 @@
 </head>
 <body>
            
-  <div class = 'Nav'>
+  <header class = 'Nav'>
     <div class="logo">
       <img src="https://natujenge.ke/assets/images/logo-wordmark.svg" alt="logo" />
     </div >
@@ -17,7 +17,7 @@
       <a href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm">About Bootcamp</a>
     </div>
     
-    </div>    
+  </header>    
 
         <ul class="links">
           <li><a href="taxcalculator.html">Tax Calculator</a></li>
@@ -25,46 +25,47 @@
       
         </ul>
 
-    <header class='Tax'>
+    <main class='Tax'>
         <div class='total-income'>
           <h1>Gross Salary</h1>
           <label >Ksh</label>
-          <input type='text' name = 'text' amount = 'Ksh' ></input>  <br></br>  <br></br>
+          <input type='text' id="gross" name = 'text' amount = 'Ksh' ></input>  <br></br>  <br></br>
   
           </div>
   
-             <div class='Deductions' >
+        <div class='Deductions' >
           <label >Netpay</label>
-          <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input> <br></br> <br></br>
+          <input type='text' id="netpay" name = 'text' placeholder='Ksh' amount='Ksh' value=""></input> <br></br> <br></br>
   
           <label >NSSF Contribution</label>
-          <input type='text' name = 'text' placeholder='Ksh' amount= 'Ksh' ></input>  <br></br>  <br></br>
+          <input type='text' id='nssf' name = 'text' placeholder='Ksh' amount= 'Ksh' value="200" disabled></input>  <br></br>  <br></br>
   
           <label >Taxable Income</label>
-          <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
+          <input type='text' id="taxable" name = 'text' placeholder='Ksh' amount='Ksh' value="20000" disabled></input>  <br></br>  <br></br>
   
           <label >Tax Before Relief</label>
-          <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
+          <input type='text' id="before_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="2500" disabled></input>  <br></br>  <br></br>
   
           <label >Personal Relief</label>
-          <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
+          <input type='text' id="personal_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="500" disabled></input>  <br></br>  <br></br>
   
           <label >Health Insurance Relief</label>
-          <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
+          <input type='text' id="health_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="10000" disabled></input>  <br></br>  <br></br>
   
           <label >PAYE</label>
-          <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input>   <br></br>  <br></br>
+          <input type='text' id="paye" name = 'text' placeholder='Ksh' amount='Ksh' value="15" disabled></input>   <br></br>  <br></br>
   
           <label >NHIF Contribution</label>
-          <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input>    <br></br>  <br></br>
+          <input type='text' id="nhif" name = 'text' placeholder='Ksh' amount='Ksh' value="1000" disabled></input>    <br></br>  <br></br>
   
           <button class="btn"><a href='billmanager.html' >Manage bills</a></button>
   
           </div>
   
-          </header>
+        </main>
 
-          <script src="taxcalculator.js"></script>
+          <script src="taxcalculator.js" type="module"></script>
+          <script src="billmanager.js" type="module"></script>
     
 </body>
 </html>
