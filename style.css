@@ -56,9 +56,6 @@ li {
   position: relative;
 }
 
-.deductions-pane:target {
-}
-
 .bills-pane {
   position: absolute;
   top: 0;
