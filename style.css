@@ -155,11 +155,13 @@ li {
   margin-top: 95px;
   margin-left: 80px;
 }
-/* .total-income label{
+ .total-income button{
     color:  #1CB484;
-    margin-right: 110px;
+    margin-right: 510px;
+    position: absolute;
+    margin-top: -2px;
   
-  } */
+  } 
 
 .total-income h1 {
   padding: 4px;
@@ -206,9 +208,11 @@ li {
   margin-top: -4%;
   width: 60%;
 }
-.net-income label {
+.net-income button {
   color: #1cb484;
   margin-right: 110px;
+  padding: 10px;
+  background-color: #fff;
 }
 
 .Expenses {
