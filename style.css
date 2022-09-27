@@ -1,0 +1,259 @@
+.Nav {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  margin: 30px;
+  box-shadow: 8px 5px 5px -2px rgba(2, 0, 1, 0);
+  -webkit-box-shadow: 8px 5px 25px -2px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 48px 5px 5px -2px rgba(0, 0, 0, 1);
+}
+
+.Nav li {
+  list-style-type: none;
+  margin-left: 400px;
+}
+.about {
+  margin-top: 20px;
+  margin-right: 100px;
+}
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+}
+.links li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+li {
+  list-style-type: none;
+}
+.logo img {
+  height: 10vmin;
+  width: 100%;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+.Nav a {
+  color: #1cb484;
+  text-decoration: none;
+  margin-top: 100px;
+  font-weight: bolder;
+  margin-bottom: -40px;
+}
+
+.Tax {
+  background-color: #1cb484;
+  width: 60%;
+  margin: auto;
+  font-size: 14px;
+  margin-top: -40px;
+}
+
+.main-area {
+  position: relative;
+}
+
+.bills-pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -192px;
+  width: 50rem;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.bills-pane:target {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1000;
+}
+
+.Deductions {
+  margin-left: 80px;
+}
+
+.Deductions input {
+  padding: 5px;
+  background-color: #fff;
+  border: none;
+  margin-left: 240px;
+  display: flex;
+  margin-top: -5%;
+}
+
+.Deductions label {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.total-income {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 95px;
+  margin-left: 80px;
+}
+/* .total-income label{
+    color:  #1CB484;
+    margin-right: 110px;
+  
+  } */
+
+.total-income h1 {
+  padding: 4px;
+  color: whitesmoke;
+}
+
+.total-income input {
+  padding: 5px;
+  background-color: #fff;
+  border: none;
+  margin-left: 114px;
+  display: flex;
+
+  width: 60%;
+}
+
+.Bills {
+  background-color: wheat;
+  /*width: 50%; */
+  /* margin: auto; */
+  /* margin-top: -40px; */
+}
+
+.net-income {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  /* margin-top: 95px; */
+  margin-left: 80px;
+  font-size: 14px;
+}
+
+.net-income h1 {
+  padding: 20px;
+  color: #1cb484;
+}
+
+.net-income input {
+  padding: 8px;
+  background-color: #fff;
+  border: none;
+  margin-left: 115px;
+  display: flex;
+  margin-top: -4%;
+  width: 60%;
+}
+.net-income label {
+  color: #1cb484;
+  margin-right: 110px;
+}
+
+.Expenses {
+  margin-left: 80px;
+}
+
+.Expenses input {
+  padding: 5px;
+  background-color: #fff;
+  border: none;
+  margin-left: 200px;
+  display: flex;
+  margin-top: -5%;
+}
+
+.Expenses label {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  color: #1cb484;
+  font-size: 14px;
+}
+
+.total-expenses {
+  display: flex;
+  margin-left: 10px;
+  justify-content: space-evenly;
+}
+
+.total-expenses input {
+  margin: 10px;
+  display: flex;
+  border: solid 3px #1cb484;
+  border-radius: 5px;
+
+}
+
+.total {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 95px;
+  margin-left: 100px;
+}
+
+.total input {
+  padding: 5px;
+  background-color: #fff;
+  border: none;
+  margin-left: 114px;
+  display: flex;
+  margin-top: -3%;
+  width: 50%;
+  color: #1cb484;
+}
+.total label {
+  color: #1cb484;
+    margin-top: -5%;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 8px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  float: right;
+  margin-right: 100px;
+  margin-top: 30px;
+  font-weight: bolder;
+}
+.btn {
+  text-align: end;
+  padding: 10px;
+  width: 20%;
+  background-color: #fff;
+  margin-right: 100px;
+  margin-top: -45px;
+  font-weight: bolder;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.btn a {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer {
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial Courier, Courier, monospace;
+  color: #fff;
+  margin-top: 30px;
+  background-color: rgb(6, 6, 6);
+  height: 25vh;
+  
+}
+
+.collaborators a{
+  color: #1cb484;
+  text-decoration: none;
+  justify-content: space-evenly;
+
+}
+
+.footer p{
+  margin-top: 10px;
+}

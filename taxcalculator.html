@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="taxcalculator.js" type="module"></script>
+    <script src="billmanager.js" type="module"></script>
+</head>
+<body>
+           
+  <main class = 'Nav'>
+    <div class="logo">
+      <img src="https://natujenge.ke/assets/images/logo-wordmark.svg" alt="logo" />
+    </div >
+    <div class="about" >
+      <a href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm">About Bootcamp</a>
+    </div>
+    
+  </main>    
+
+        <ul class="links">
+          <li><a href="#deductions-pane">Tax Calculator</a></li>
+          <li><a href="#bills-pane">Bill Manager</a></li>
+      
+        </ul>
+
+    <main class='Tax'>
+        <div class='total-income'>
+          <h1>Gross Salary</h1>
+          <label >Ksh</label>
+          <input type='text' id="gross" name = 'text' amount = 'Ksh' ></input>  <br></br>  <br></br>
+  
+          </div>
+
+      <div class="main-area">
+      <div id="deductions-pane" class="deductions-pane">
+        <div class='Deductions' >
+          <label >Netpay</label>
+          <input type='text' id="netpay" name = 'text' placeholder='Ksh' amount='Ksh' value=""></input> <br></br> <br></br>
+  
+          <label >NSSF Contribution</label>
+          <input type='text' id='nssf' name = 'text' placeholder='Ksh' amount= 'Ksh' value="200" disabled></input>  <br></br>  <br></br>
+  
+          <label >Taxable Income</label>
+          <input type='text' id="taxable" name = 'text' placeholder='Ksh' amount='Ksh' value="20000" disabled></input>  <br></br>  <br></br>
+  
+          <label >Tax Before Relief</label>
+          <input type='text' id="before_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="2500" disabled></input>  <br></br>  <br></br>
+  
+          <label >Personal Relief</label>
+          <input type='text' id="personal_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="500" disabled></input>  <br></br>  <br></br>
+  
+          <label >Health Insurance Relief</label>
+          <input type='text' id="health_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="10000" disabled></input>  <br></br>  <br></br>
+  
+          <label >PAYE</label>
+          <input type='text' id="paye" name = 'text' placeholder='Ksh' amount='Ksh' value="15" disabled></input>   <br></br>  <br></br>
+  
+          <label >NHIF Contribution</label>
+          <input type='text' id="nhif" name = 'text' placeholder='Ksh' amount='Ksh' value="1000" disabled></input>    <br></br>  <br></br>
+  
+          <button class="btn"><a href='#bills-pane' >Manage bills</a></button>
+  
+          </div>
+          </div>
+
+          <div class="bills-pane" id="bills-pane">
+            <div class='Bills'>
+       
+              <div class='net-income'>
+                  <h1>Bill Manager</h1>
+              <label >Net Salary</label>
+             <input type='text' id="net_salary" name = 'text' amount = 'Ksh' value="" ></input>  <br></br>  <br></br>
+      
+             </div>
+      
+              <div class='Expenses' >
+      
+               <label >Travel</label>
+      
+       <input type='text' name = 'qty' placeholder='Ksh' amount='Ksh' ></input> <br></br> <br></br>
+      
+       <label >Rent</label>
+       <input type='text' name = 'qty' placeholder='Ksh' amount= 'Ksh' ></input>  <br></br>  <br></br>
+      
+       <label >Entertainment</label>
+       <input type='text' name = 'qty' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
+      
+       <label >Food</label>
+       <input type='text' name = 'qty' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
+      
+       <label >Shooping</label>
+       <input type='text' name = 'qty' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
+      
+       </div>
+      
+       <div class='total-expenses'> 
+       <input type='text' name = 'number' amount = 'Ksh' ></input>  <br></br>  <br></br>
+      
+       <input type='text' name = 'number' amount = 'Ksh' ></input>  <br></br>  <br></br>
+          </div>
+                <button id='add' onClick='total'>Add</button>
+      
+                  <div class='total'>
+                <label >Balance </label>
+            <input type="text" value="" id="output"/> </input>  <br></br>  <br></br>
+           </div>
+      
+          </div>
+
+          </div>
+          </div>
+        </main>    
+
+         <div class="footer">
+
+          <div class="collaborators">
+          
+          <p> project done by Go-Getters </p>
+         <p>GitHub: <a href="https://github.com/evansmbithi">Evans Mbithi</a></p>
+         <p>GitHub: <a href="https://github.com/Awuor-Nancy">Nancy Awuor</a></p>
+          
+          <div>
+          <a href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm">Powered by @natujenge</a>
+      </div>
+
+      </div>
+</body>
+</html>
