@@ -23,5 +23,5 @@ function calculate(){
     document.getElementsByClassName('total').value = total;
     let bal = netSalary - totalSum;
     console.log(bal);
-   }
+   });
  }
