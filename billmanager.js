@@ -8,7 +8,7 @@ netSalary = net_pay;
 function calculate() {
   document.getElementById("total").addEventListener("click", () => {
     const output = document.getElementById("output");
-    output.value = +output.value;
+    output.value = + output.value;
 
     let totalSum = parseInt(document.getElementsByName("qty").value);
     console.log(`totalSum: ${totalSum}`);
@@ -22,10 +22,5 @@ function calculate() {
     document.getElementsByClassName("total").value = total;
     let bal = netSalary - totalSum;
     console.log(bal);
-<<<<<<< HEAD
-   });
- }
-=======
   });
 }
->>>>>>> bebc18fa335f2f100f8628f3cbab2012f55cd4d8
