@@ -120,6 +120,35 @@ li {
   width: 10rem;
 }
 
+.Expenses {
+  margin-left: 80px;
+  display: flex;
+  flex-flow: column nowrap;
+  /* height: 25rem; */
+}
+
+.Expenses input {
+  padding: 5px;
+  background-color: #fff;
+  border: none;
+  /* margin-left: 240px;
+  display: flex; */
+  /* margin-top: -5%; */
+}
+
+.Expenses label {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  margin: 5px 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.Expenses label > span {
+  width: 10rem;
+}
+
 .total-income {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: bold;
@@ -149,6 +178,7 @@ li {
 
 .Bills {
   background-color: wheat;
+  /* padding-bottom: 100vh; */
   /*width: 50%; */
   /* margin: auto; */
   /* margin-top: -40px; */
@@ -172,7 +202,7 @@ li {
   background-color: #fff;
   border: none;
   margin-left: 115px;
-  display: flex;
+  /* display: flex; */
   margin-top: -4%;
   width: 60%;
 }
@@ -259,6 +289,7 @@ button {
   margin-right: 100px;
   margin-top: 30px;
   font-weight: bolder;
+  cursor: pointer;
 }
 .btn {
   text-align: end;
@@ -283,20 +314,18 @@ button {
   font-family: Arial Courier, Courier, monospace;
   color: #fff;
   margin-top: 30px;
+  bottom: 0;
   background-color: rgb(6, 6, 6);
-  height: 25vh;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .collaborators a {
   color: #1cb484;
   text-decoration: none;
   justify-content: space-evenly;
-}
-
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .footer p {
@@ -326,6 +355,22 @@ button {
   }
 
   /* bills-pane */
-}
+  .Expenses label > input {
+    margin: 20px;
+    justify-content: flex-start;
+  }
+  .Expenses {
+    margin-left: 0;
+  }
 
-/* bills-pane */
+  .net-income {
+    /* margin-top: 95px; */
+    margin-left: 10px;
+  }
+  .net-income input {
+    margin: 25px;
+  }
+  .Bills {
+    width: 300px;
+  }
+}
