@@ -6,12 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tax calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="nav-style.css">
     <script src="taxcalculator.js" type="module"></script>
     <script src="billmanager.js" type="module"></script>
 </head>
 <body>
+
+  <header>
+    <nav class="navbar container">
+      <a href="#" class="logo"><img src="https://natujenge.ke/assets/images/logo-wordmark.svg" alt="logo" /></a>
+      <input type="checkbox" name="" id="toggler">
+      <label for="toggler">
+        <i class="icon-size ri-menu-line"></i>
+      </label>
+      <div class="menu">
+        <ul class="list">
+          <li><a href="#">Home</a></li>
+          <li><a target="_blank" href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm">About Bootcamp</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
            
-  <main class = 'Nav'>
+  <!-- <div class = 'Nav'>
     <div class="logo">
       <img src="https://natujenge.ke/assets/images/logo-wordmark.svg" alt="logo" />
     </div >
@@ -19,7 +38,7 @@
       <a href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm">About Bootcamp</a>
     </div>
     
-  </main>    
+  </div> -->
 
         <ul class="links">
           <li><a href="#deductions-pane">Tax Calculator</a></li>
@@ -38,34 +57,52 @@
       <div class="main-area">
       <div id="deductions-pane" class="deductions-pane">
         <div class='Deductions' >
-          <label >Netpay</label>
-          <input type='text' id="netpay" name = 'text' placeholder='Ksh' amount='Ksh' value=""></input> <br></br> <br></br>
+          <label for="netpay">
+            <span>Netpay</span>  
+            <input type='text' id="netpay" name = 'text' placeholder='Ksh' amount='Ksh' value=""></input></label>
+          <!-- <input type='text' id="netpay" name = 'text' placeholder='Ksh' amount='Ksh' value=""></input> <br></br> <br></br> -->
   
-          <label >NSSF Contribution</label>
-          <input type='text' id='nssf' name = 'text' placeholder='Ksh' amount= 'Ksh' value="200" disabled></input>  <br></br>  <br></br>
+          <label for="nssf">
+           <span>NSSF Contribution</span>  
+            <input type='text' id='nssf' name = 'text' placeholder='Ksh' amount= 'Ksh' value="200" disabled></input></label>
+          <!-- <input type='text' id='nssf' name = 'text' placeholder='Ksh' amount= 'Ksh' value="200" disabled></input>  <br></br>  <br></br> -->
   
-          <label >Taxable Income</label>
-          <input type='text' id="taxable" name = 'text' placeholder='Ksh' amount='Ksh' value="20000" disabled></input>  <br></br>  <br></br>
+          <label for="taxable">
+            <span>Taxable Income</span>  
+            <input type='text' id="taxable" name = 'text' placeholder='Ksh' amount='Ksh' value="20000" disabled></input></label>
+          <!-- <input type='text' id="taxable" name = 'text' placeholder='Ksh' amount='Ksh' value="20000" disabled></input>  <br></br>  <br></br> -->
   
-          <label >Tax Before Relief</label>
-          <input type='text' id="before_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="2500" disabled></input>  <br></br>  <br></br>
+          <label for="before_relief">
+           <span>Tax Before Relief</span>  
+           <input type='text' id="before_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="2500" disabled></input></label>
+          <!-- <input type='text' id="before_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="2500" disabled></input>  <br></br>  <br></br> -->
   
-          <label >Personal Relief</label>
-          <input type='text' id="personal_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="500" disabled></input>  <br></br>  <br></br>
+          <label for="personal_relief">
+            <span>Personal Relief</span>  
+            <input type='text' id="personal_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="500" disabled></input></label>
+          <!-- <input type='text' id="personal_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="500" disabled></input>  <br></br>  <br></br> -->
   
-          <label >Health Insurance Relief</label>
-          <input type='text' id="health_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="10000" disabled></input>  <br></br>  <br></br>
+          <label for="health_relief">
+            <span>Health Insurance Relief</span>  
+            <input type='text' id="health_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="10000" disabled></input></label>
+          <!-- <input type='text' id="health_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="10000" disabled></input>  <br></br>  <br></br> -->
   
-          <label >PAYE</label>
-          <input type='text' id="paye" name = 'text' placeholder='Ksh' amount='Ksh' value="15" disabled></input>   <br></br>  <br></br>
+          <label for="paye">
+            <span>PAYE</span>  
+            <input type='text' id="paye" name = 'text' placeholder='Ksh' amount='Ksh' value="15" disabled></input></label>
+          <!-- <input type='text' id="paye" name = 'text' placeholder='Ksh' amount='Ksh' value="15" disabled></input>   <br></br>  <br></br> -->
   
-          <label >NHIF Contribution</label>
-          <input type='text' id="nhif" name = 'text' placeholder='Ksh' amount='Ksh' value="1000" disabled></input>    <br></br>  <br></br>
-  
-          <button class="btn"><a href='#bills-pane' >Manage bills</a></button>
-  
+          <label for="nhif">
+            <span>NHIF Contribution</span>  
+            <input type='text' id="nhif" name = 'text' placeholder='Ksh' amount='Ksh' value="1000" disabled></input></label>
+          <!-- <input type='text' id="nhif" name = 'text' placeholder='Ksh' amount='Ksh' value="1000" disabled></input>    <br></br>  <br></br> -->
+       
           </div>
+          <div style="text-align: right;">
+            <a class="bill-btn" href="#bills-pane">Manage bills</a>
           </div>
+          
+       </div>
 
           <div class="bills-pane" id="bills-pane">
             <div class='Bills'>
@@ -118,5 +155,6 @@
          <div class="footer">
         <footer>Powered by natujenge</footer>
       </div>
+      <script src="nav-script.js"></script>
 </body>
 </html>

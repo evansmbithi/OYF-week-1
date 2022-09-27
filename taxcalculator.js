@@ -37,8 +37,8 @@ let net_pay = parseInt(gross_salary.value) - total_deductions;
 gross_salary.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     // console.log(net_pay);
-    window.location.reload();
     document.getElementById("netpay").value = net_pay;
+    window.location.reload();
   }
 });
 
