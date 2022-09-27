@@ -293,6 +293,12 @@ button {
   justify-content: space-evenly;
 }
 
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer p {
   margin-top: 10px;
 }
