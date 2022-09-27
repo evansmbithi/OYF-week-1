@@ -22,10 +22,5 @@ function calculate() {
     document.getElementsByClassName("total").value = total;
     let bal = netSalary - totalSum;
     console.log(bal);
-<<<<<<< HEAD
-   });
- }
-=======
   });
 }
->>>>>>> bebc18fa335f2f100f8628f3cbab2012f55cd4d8
