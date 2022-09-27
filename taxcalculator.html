@@ -11,7 +11,7 @@
 </head>
 <body>
            
-  <header class = 'Nav'>
+  <main class = 'Nav'>
     <div class="logo">
       <img src="https://natujenge.ke/assets/images/logo-wordmark.svg" alt="logo" />
     </div >
@@ -19,7 +19,7 @@
       <a href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm">About Bootcamp</a>
     </div>
     
-  </header>    
+  </main>    
 
         <ul class="links">
           <li><a href="#deductions-pane">Tax Calculator</a></li>
@@ -81,19 +81,19 @@
       
                <label >Travel</label>
       
-       <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input> <br></br> <br></br>
+       <input type='text' name = 'qty' placeholder='Ksh' amount='Ksh' ></input> <br></br> <br></br>
       
        <label >Rent</label>
-       <input type='text' name = 'text' placeholder='Ksh' amount= 'Ksh' ></input>  <br></br>  <br></br>
+       <input type='text' name = 'qty' placeholder='Ksh' amount= 'Ksh' ></input>  <br></br>  <br></br>
       
        <label >Entertainment</label>
-       <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
+       <input type='text' name = 'qty' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
       
        <label >Food</label>
-       <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
+       <input type='text' name = 'qty' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
       
        <label >Shooping</label>
-       <input type='text' name = 'text' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
+       <input type='text' name = 'qty' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
       
        </div>
       
@@ -102,11 +102,11 @@
       
        <input type='text' name = 'number' amount = 'Ksh' ></input>  <br></br>  <br></br>
           </div>
-                <button class='add' onClick='add'>Add</button>
+                <button id='add' onClick='total'>Add</button>
       
-                  <div class='balance'>
-                <label >Balance</label>
-           <input type='text' name = 'text' amount = 'Ksh' ></input>  <br></br>  <br></br>
+                  <div class='total'>
+                <label >Balance </label>
+            <input type="text" value="" id="output"/> </input>  <br></br>  <br></br>
            </div>
       
           </div>
@@ -114,5 +114,19 @@
           </div>
           </div>
         </main>    
+
+         <div class="footer">
+
+          <div class="collaborators">
+          
+          <p> project done by Go-Getters </p>
+         <p>GitHub: <a href="https://github.com/evansmbithi">Evans Mbithi</a></p>
+         <p>GitHub: <a href="https://github.com/Awuor-Nancy">Nancy Awuor</a></p>
+          
+          <div>
+          <a href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm">Powered by @natujenge</a>
+      </div>
+
+      </div>
 </body>
 </html>
