@@ -381,4 +381,7 @@ button {
     width: 300px;
     height: 63rem;
   }
+  .total {
+    margin-left: 20px;
+  }
 }

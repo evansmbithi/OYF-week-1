@@ -1,8 +1,6 @@
-import net_pay from "./taxcalculator.js";
+let net_pay = document.getElementById("netpay").value;
 
-// console.log(net_pay);
-
-document.getElementById("net_salary").value = net_pay; //display net_pay
+let bill_content = document.querySelector(".bill-content");
 
 let travel = parseInt(document.getElementById("travel"));
 let rent = parseInt(document.getElementById("rent"));
@@ -26,8 +24,7 @@ function grabBill() {
   return content;
 }
 
-let bill_content = document.querySelector(".bill-content");
-
+// onclick add Bill
 let addBill = document.getElementById("add-bill");
 addBill.addEventListener("click", () => {
   bill_amount.push(parseInt(document.getElementById("bill-amount").value));
@@ -36,6 +33,8 @@ addBill.addEventListener("click", () => {
   bill_content.appendChild(table_content);
   document.getElementById("bill-label").value = "";
   document.getElementById("bill-amount").value = "";
+
+  document.getElementById("balance").value = computeBal();
 });
 
 // compute balance
@@ -48,9 +47,4 @@ function computeBal() {
   return balance;
 }
 
-// onclick compute
-let computeBtn = document.querySelector(".computeBal");
-computeBtn.addEventListener("click", () => {
-  let bal = computeBal();
-  document.getElementById("balance").value = bal;
-});
+document.getElementById("balance").value = computeBal();
