@@ -31,7 +31,6 @@ let bill_content = document.querySelector(".bill-content");
 let addBill = document.getElementById("add-bill");
 addBill.addEventListener("click", () => {
   bill_amount.push(parseInt(document.getElementById("bill-amount").value));
-  console.log(bill_amount);
   let table_content = document.createElement("table");
   table_content.innerHTML = grabBill();
   bill_content.appendChild(table_content);
