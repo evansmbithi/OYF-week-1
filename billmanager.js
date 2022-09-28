@@ -34,7 +34,7 @@ addBill.addEventListener("click", () => {
   document.getElementById("bill-label").value = "";
   document.getElementById("bill-amount").value = "";
 
-  document.getElementById("balance").value = computeBal();
+  document.getElementById("balance").value = computeBal(); //update balance
 });
 
 // compute balance
