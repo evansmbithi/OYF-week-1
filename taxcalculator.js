@@ -32,6 +32,7 @@ let total_deductions =
   payeVal +
   nhif;
 
+  // calculate the netpay after deductions
   console.log(total_deductions);
   gross_salary.addEventListener('change', updateNetPay)
   let net_pay 

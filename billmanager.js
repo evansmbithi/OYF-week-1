@@ -33,7 +33,7 @@ let shopping = parseInt(document.getElementById("shopping"));
 // compute total
 function computeBal() {
   let total_bill = travel + rent + entertainment + food + shopping;
-  let balance = parseInt(net_pay) - total_bill;
+  let balance = parseInt(net_pay) - parseInt(total_bill);
   console.log(total_bill);
   // display balance
   document.getElementById("balance").value = balance;
