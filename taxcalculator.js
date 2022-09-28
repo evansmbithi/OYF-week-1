@@ -32,14 +32,13 @@ let total_deductions =
   payeVal +
   nhif;
 
-let net_pay = parseInt(gross_salary.value) - total_deductions;
-
-gross_salary.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    // console.log(net_pay);
+  console.log(total_deductions);
+  gross_salary.addEventListener('change', updateNetPay)
+  let net_pay 
+  function updateNetPay() {
+    net_pay = gross_salary.value - total_deductions;
     document.getElementById("netpay").value = net_pay;
-    window.location.reload();
   }
-});
 
-export default net_pay;
+ export default net_pay;
+
