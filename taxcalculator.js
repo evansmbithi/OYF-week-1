@@ -11,6 +11,7 @@ let personal_relief = parseInt(
 let health_relief = parseInt(document.getElementById("health_relief").value);
 let payeVal = computePAYE();
 let nhif = parseInt(document.getElementById("nhif").value);
+var net_pay = 0;
 
 // compute PAYE
 function computePAYE() {
@@ -32,14 +33,14 @@ let total_deductions =
   payeVal +
   nhif;
 
-  // calculate the netpay after deductions
-  console.log(total_deductions);
-  gross_salary.addEventListener('change', updateNetPay)
-  let net_pay 
-  function updateNetPay() {
-    net_pay = gross_salary.value - total_deductions;
+net_pay = parseInt(gross_salary.value) - total_deductions;
+
+gross_salary.addEventListener("keypress", function (event) {
+  if (event.key === "Enter" || event.key === 13) {
+    // console.log(net_pay);
     document.getElementById("netpay").value = net_pay;
+    window.location.reload();
   }
+});
 
- export default net_pay;
-
+export default net_pay;
