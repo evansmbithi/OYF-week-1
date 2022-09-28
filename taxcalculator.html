@@ -51,8 +51,13 @@
     <main class='Tax'>
         <div class='total-income'>
           <h1>Gross Salary</h1>
+<<<<<<< HEAD
           <button>Ksh</button>
           <input type='number' id="gross" name = 'text' amount = 'Ksh' ></input>  <br></br>  <br></br>
+=======
+          <label >Ksh</label>
+          <input type='text' id="gross" name = 'text' amount = 'Ksh' >  <br></br>  <br></br>
+>>>>>>> 48a800551ea0bcacded99ba1b3601be6559d72a5
   
           </div>
 
@@ -61,6 +66,7 @@
         <div class='Deductions' >
           <label for="netpay">
             <span>Netpay</span>  
+<<<<<<< HEAD
             <input type='number' id="netpay" name = 'text' placeholder='Ksh' amount='Ksh' value=""></input></label>
           <!-- <input type='text' id="netpay" name = 'text' placeholder='Ksh' amount='Ksh' value=""></input> <br></br> <br></br> -->
   
@@ -98,6 +104,45 @@
             <span>NHIF Contribution</span>  
             <input type='number' id="nhif" name = 'text' placeholder='Ksh' amount='Ksh' value="1000" disabled></input></label>
           <!-- <input type='text' id="nhif" name = 'text' placeholder='Ksh' amount='Ksh' value="1000" disabled></input>    <br></br>  <br></br> -->
+=======
+            <input type='text' id="netpay" name = 'text' placeholder='Ksh' amount='Ksh'></label>
+          <!-- <input type='text' id="netpay" name = 'text' placeholder='Ksh' amount='Ksh' value=""> <br></br> <br></br> -->
+  
+          <label for="nssf">
+           <span>NSSF Contribution</span>  
+            <input type='text' id='nssf' name = 'text' placeholder='Ksh' amount= 'Ksh' value="200" disabled></label>
+          <!-- <input type='text' id='nssf' name = 'text' placeholder='Ksh' amount= 'Ksh' value="200" disabled>  <br></br>  <br></br> -->
+  
+          <label for="taxable">
+            <span>Taxable Income</span>  
+            <input type='text' id="taxable" name = 'text' placeholder='Ksh' amount='Ksh' value="20000" disabled></label>
+          <!-- <input type='text' id="taxable" name = 'text' placeholder='Ksh' amount='Ksh' value="20000" disabled>  <br></br>  <br></br> -->
+  
+          <label for="before_relief">
+           <span>Tax Before Relief</span>  
+           <input type='text' id="before_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="2500" disabled></label>
+          <!-- <input type='text' id="before_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="2500" disabled>  <br></br>  <br></br> -->
+  
+          <label for="personal_relief">
+            <span>Personal Relief</span>  
+            <input type='text' id="personal_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="500" disabled></label>
+          <!-- <input type='text' id="personal_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="500" disabled>  <br></br>  <br></br> -->
+  
+          <label for="health_relief">
+            <span>Health Insurance Relief</span>  
+            <input type='text' id="health_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="10000" disabled></label>
+          <!-- <input type='text' id="health_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="10000" disabled>  <br></br>  <br></br> -->
+  
+          <label for="paye">
+            <span>PAYE</span>  
+            <input type='text' id="paye" name = 'text' placeholder='Ksh' amount='Ksh' value="15" disabled></label>
+          <!-- <input type='text' id="paye" name = 'text' placeholder='Ksh' amount='Ksh' value="15" disabled>   <br></br>  <br></br> -->
+  
+          <label for="nhif">
+            <span>NHIF Contribution</span>  
+            <input type='text' id="nhif" name = 'text' placeholder='Ksh' amount='Ksh' value="1000" disabled></label>
+          <!-- <input type='text' id="nhif" name = 'text' placeholder='Ksh' amount='Ksh' value="1000" disabled>    <br></br>  <br></br> -->
+>>>>>>> 48a800551ea0bcacded99ba1b3601be6559d72a5
        
           </div>
           <div style="text-align: right;">
@@ -106,18 +151,25 @@
           
        </div>
 
+
+       <!-- Bills-pane -->
           <div class="bills-pane" id="bills-pane">
             <div class='Bills'>
        
               <div class='net-income'>
                   <h1>Bill Manager</h1>
               <label >Net Salary</label>
+<<<<<<< HEAD
              <input type='number' id="net_salary" name = 'text' amount = 'Ksh' value="" ></input>  <br></br>  <br></br>
+=======
+             <input type='text' id="net_salary" name = 'text' amount = 'Ksh' >  <br></br>  <br></br>
+>>>>>>> 48a800551ea0bcacded99ba1b3601be6559d72a5
       
              </div>
       
               <div class='Expenses' >
       
+<<<<<<< HEAD
                <label >Travel</label>
       
        <input type='number' name = 'qty' placeholder='Ksh' amount='Ksh' ></input> <br></br> <br></br>
@@ -133,20 +185,60 @@
       
        <label >Shooping</label>
        <input type='number' name = 'qty' placeholder='Ksh' amount='Ksh' ></input>  <br></br>  <br></br>
+=======
+       <label >
+        <span>Travel</span> 
+        <input type='text' id="travel" name = 'qty' placeholder='Ksh' amount='Ksh' >
+       </label>      
+       <!-- <input type='text' id="travel" name = 'qty' placeholder='Ksh' amount='Ksh' > <br></br> <br></br> -->
+      
+       <label >
+        <span>Rent</span> 
+        <input type='text' id="rent" name = 'qty' placeholder='Ksh' amount= 'Ksh' >
+      </label>
+       <!-- <input type='text' id="rent" name = 'qty' placeholder='Ksh' amount= 'Ksh' >  <br></br>  <br></br> -->
+      
+       <label >
+        <span>Entertainment</span>
+        <input type='text' id="entertainment" name = 'qty' placeholder='Ksh' amount='Ksh' >
+      </label>
+       <!-- <input type='text' id="entertainment" name = 'qty' placeholder='Ksh' amount='Ksh' >  <br></br>  <br></br> -->
+      
+       <label >
+        <span>Food</span>
+        <input type='text' id="food" name = 'qty' placeholder='Ksh' amount='Ksh' >
+      </label>
+       <!-- <input type='text' id="food" name = 'qty' placeholder='Ksh' amount='Ksh' >  <br></br>  <br></br> -->
+      
+       <label >
+         <span>Shopping</span>
+         <input type='text' id="shopping" name = 'qty' placeholder='Ksh' amount='Ksh' >
+        </label>
+       <!-- <input type='text' id="shopping" name = 'qty' placeholder='Ksh' amount='Ksh' >  <br></br>  <br></br> -->
+>>>>>>> 48a800551ea0bcacded99ba1b3601be6559d72a5
       
        </div>
       
-       <!-- <div class='total-expenses'> 
-       <input type='text' name = 'number' amount = 'Ksh' ></input>  <br></br>  <br></br>
+       <div class='total-expenses'> 
+          <input type='text' name = 'number' amount = 'Ksh' >  <br></br>  <br></br>
+          
+          <input type='text' name = 'number' amount = 'Ksh' >  <br></br>  <br></br>
+        </div>
+
+          <button class="computeBal">Compute</button>
+          <button id='add' onClick='total'>Add</button>
       
-       <input type='text' name = 'number' amount = 'Ksh' ></input>  <br></br>  <br></br>
-          </div> -->
-                <button id='add' onClick='total'>Add</button>
-      
+<<<<<<< HEAD
                   <div class='total'>
                 <label >Balance </label>
             <input type="number" value="" id="output"/> </input>  <br></br>  <br></br>
            </div>
+=======
+        <div class='total'>
+            <label >Balance </label>
+            <input type="text" id="balance"/> <br></br>  <br></br>
+        </div>
+>>>>>>> 48a800551ea0bcacded99ba1b3601be6559d72a5
       
           </div>
 
@@ -154,8 +246,7 @@
           </div>
         </main>    
 
-         <div class="footer">
-
+      <footer class="footer">
           <div class="collaborators">
           
           <p> project done by Go-Getters </p>
@@ -167,6 +258,7 @@
       </div>
 
       </div>
+    </footer>
       <script src="nav-script.js"></script>
 </body>
 </html>
