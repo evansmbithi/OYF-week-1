@@ -1,6 +1,5 @@
 // on gross entry, then user presses enter... Deductions are computed
 let gross_salary = document.getElementById("gross");
-var net_pay = 0;
 
 // deductions
 let nssf = parseInt(document.getElementById("nssf").value);
