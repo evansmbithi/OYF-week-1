@@ -66,9 +66,9 @@ addBill.addEventListener("click", () => {
 function computeBal() {
   let total_bill = 0;
   for (let i = 0; i < Object.keys(bills).length; i++) {
-    total_bill += parseInt(Object.values(bills)[i]);
+    total_bill += parseFloat(Object.values(bills)[i]);
   }
 
-  let balance = parseInt(net_pay) - total_bill;
+  let balance = parseFloat(net_pay) - total_bill;
   return balance;
 }
