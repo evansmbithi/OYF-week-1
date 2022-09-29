@@ -36,6 +36,6 @@ let total_deductions =
 
 gross_salary.addEventListener("keyup", (e) => {
   let display_net = e.target.value - total_deductions;
-  document.getElementById("netpay").value = display_net;
+  parseFloat(document.getElementById("netpay").value) = display_net;
   document.getElementById("net_salary").value = display_net; //display net_pay on bill-pane
 });

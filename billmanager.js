@@ -4,10 +4,10 @@ let bill_content = document.querySelector(".bill-content");
 
 // default bill items
 const bills = {
-  rent: 2000,
-  transport: 1000,
-  entertainment: 500,
-  food: 2000,
+  Rent: 2000,
+  Transport: 1000,
+  Entertainment: 500,
+  Food: 2000,
 };
 
 // generate bills
@@ -49,7 +49,7 @@ let addBill = document.getElementById("add-bill");
 addBill.addEventListener("click", () => {
   // fetch bill item
   let bill_label = document.getElementById("bill-label").value;
-  let bill_value = document.getElementById("bill-amount").value;
+  let bill_value = parseFloat(document.getElementById("bill-amount").value);
   bills[bill_label] = bill_value;
   newBill(); // replace child table with new entry
   console.log(bills);
@@ -66,9 +66,9 @@ addBill.addEventListener("click", () => {
 function computeBal() {
   let total_bill = 0;
   for (let i = 0; i < Object.keys(bills).length; i++) {
-    total_bill += parseFloat(Object.values(bills)[i]);
+    total_bill += Object.values(bills)[i];
   }
 
-  let balance = parseFloat(net_pay) - total_bill;
+  let balance = net_pay - total_bill;
   return balance;
 }
