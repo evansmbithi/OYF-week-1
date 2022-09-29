@@ -1,3 +1,3 @@
 # OYF-week-1
 
-See it <a href="https://evansmbithi.github.io/OYF-week-1/">live</a>
+See it <a target="_blank" href="https://evansmbithi.github.io/OYF-week-1/">live</a>
