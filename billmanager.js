@@ -1,26 +1,74 @@
-import net_pay from "./taxcalculator.js";
+let net_pay = document.getElementById("netpay").value;
 
-// console.log(net_pay);
+let bill_content = document.querySelector(".bill-content");
 
-let netSalary = parseInt(document.getElementById("net_salary").value);
-netSalary = net_pay;
+// default bill items
+const bills = {
+  rent: 2000,
+  transport: 1000,
+  entertainment: 500,
+  food: 2000,
+};
 
-function calculate() {
-  document.getElementById("total").addEventListener("click", () => {
-    const output = document.getElementById("output");
-    output.value = +output.value;
+// generate bills
+function grabBill(key, value) {
+  let content = `
+    <tr>
+      <td>${key}</td>
+      <td>${value}</td>
+    </tr>
+  `;
 
-    let totalSum = parseInt(document.getElementsByName("qty").value);
-    console.log(`totalSum: ${totalSum}`);
+  return content;
+}
 
-    var total = 0;
-    for (var i = 0; i < totalSum.length; i++) {
-      if (parseInt(totalSum[i].value)) {
-        total += parseInt(totalSum[i].value);
-      }
-    }
-    document.getElementsByClassName("total").value = total;
-    let bal = netSalary - totalSum;
-    console.log(bal);
-  });
+// display bills in a table
+let table_content = document.createElement("table");
+table_content.id = "initial-table";
+for (const [key, value] of Object.entries(bills)) {
+  table_content.innerHTML += grabBill(key, value);
+}
+bill_content.appendChild(table_content);
+
+// display balance
+document.getElementById("balance").value = computeBal();
+
+// replace table view upon new bill entry
+function newBill() {
+  const initialTbl = bill_content.children[0]; // first child of bill-content
+
+  let table_content = document.createElement("table");
+  for (const [key, value] of Object.entries(bills)) {
+    table_content.innerHTML += grabBill(key, value);
+  }
+  bill_content.replaceChild(table_content, initialTbl); // replace initial table with new table
+}
+
+// when btn 'Add Bill' is clicked
+let addBill = document.getElementById("add-bill");
+addBill.addEventListener("click", () => {
+  // fetch bill item
+  let bill_label = document.getElementById("bill-label").value;
+  let bill_value = document.getElementById("bill-amount").value;
+  bills[bill_label] = bill_value;
+  newBill(); // replace child table with new entry
+  console.log(bills);
+
+  // compute new balance
+  document.getElementById("balance").value = computeBal();
+
+  // clear bill input fields
+  document.getElementById("bill-label").value = "";
+  document.getElementById("bill-amount").value = "";
+});
+
+// compute balance
+function computeBal() {
+  let total_bill = 0;
+  for (let i = 0; i < Object.keys(bills).length; i++) {
+    total_bill += parseInt(Object.values(bills)[i]);
+  }
+
+  let balance = parseInt(net_pay) - total_bill;
+  return balance;
 }
