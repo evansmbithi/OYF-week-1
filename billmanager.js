@@ -2,7 +2,7 @@ let net_pay = document.getElementById("netpay").value;
 
 let bill_content = document.querySelector(".bill-content");
 
-// var bill_amount = [];
+// default bill items
 const bills = {
   rent: 2000,
   transport: 1000,
@@ -30,7 +30,7 @@ for (const [key, value] of Object.entries(bills)) {
 }
 bill_content.appendChild(table_content);
 
-// replace table upon new bill entry
+// replace table view upon new bill entry
 function newBill() {
   const initialTbl = bill_content.children[0]; // first child of bill-content
 
@@ -38,21 +38,23 @@ function newBill() {
   for (const [key, value] of Object.entries(bills)) {
     table_content.innerHTML += grabBill(key, value);
   }
-  bill_content.replaceChild(table_content, initialTbl);
+  bill_content.replaceChild(table_content, initialTbl); // replace initial table with new table
 }
 
 // display balance
 
-// onclick add Bill
+// when btn 'Add Bill' is clicked
 let addBill = document.getElementById("add-bill");
 addBill.addEventListener("click", () => {
-  // add bill item
+  // fetch bill item
   let bill_label = document.getElementById("bill-label").value;
   let bill_value = document.getElementById("bill-amount").value;
   bills[bill_label] = bill_value;
-  newBill();
+  newBill(); // replace child table with new entry
+  console.log(bills);
 
   // compute new balance
+  document.getElementById("balance").value = computeBal();
 
   // clear bill input fields
   document.getElementById("bill-label").value = "";
@@ -62,10 +64,11 @@ addBill.addEventListener("click", () => {
 // compute balance
 function computeBal() {
   let total_bill = 0;
-  for (let i = 0; i < bill_amount.length; i++) {
-    total_bill += bill_amount[i];
+  for (let i = 0; i < Object.keys(bills).length; i++) {
+    total_bill += parseInt(Object.values(bills)[i]);
   }
-  let balance = parseInt(net_pay) - parseInt(total_bill);
+
+  let balance = parseInt(net_pay) - total_bill;
   return balance;
 }
 
