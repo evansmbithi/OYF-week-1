@@ -30,6 +30,9 @@ for (const [key, value] of Object.entries(bills)) {
 }
 bill_content.appendChild(table_content);
 
+// display balance
+document.getElementById("balance").value = computeBal();
+
 // replace table view upon new bill entry
 function newBill() {
   const initialTbl = bill_content.children[0]; // first child of bill-content
@@ -40,8 +43,6 @@ function newBill() {
   }
   bill_content.replaceChild(table_content, initialTbl); // replace initial table with new table
 }
-
-// display balance
 
 // when btn 'Add Bill' is clicked
 let addBill = document.getElementById("add-bill");
@@ -71,5 +72,3 @@ function computeBal() {
   let balance = parseInt(net_pay) - total_bill;
   return balance;
 }
-
-document.getElementById("balance").value = computeBal();
