@@ -1,5 +1,6 @@
 // on gross entry, then user presses enter... Deductions are computed
 let gross_salary = document.getElementById("gross");
+var net_pay = 0;
 
 // deductions
 let nssf = parseInt(document.getElementById("nssf").value);
@@ -16,8 +17,8 @@ let nhif = parseInt(document.getElementById("nhif").value);
 function computePAYE() {
   let paye = document.getElementById("paye").value;
   let payeInt = parseInt(paye);
-  let compute = payeInt / 100;
-  let res = compute * gross_salary.value;
+  let percentage = payeInt / 100;
+  let res = percentage * gross_salary.value;
   return res;
 }
 
@@ -32,14 +33,10 @@ let total_deductions =
   payeVal +
   nhif;
 
-let net_pay = parseInt(gross_salary.value) - total_deductions;
+// net_pay = parseInt(gross_salary.value) - total_deductions;
 
-gross_salary.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    // console.log(net_pay);
-    document.getElementById("netpay").value = net_pay;
-    window.location.reload();
-  }
+gross_salary.addEventListener("keyup", (e) => {
+  let display_net = e.target.value - total_deductions;
+  document.getElementById("netpay").value = display_net;
+  document.getElementById("net_salary").value = display_net; //display net_pay on bill-pane
 });
-
-export default net_pay;

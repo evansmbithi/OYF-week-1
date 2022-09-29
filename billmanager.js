@@ -1,26 +1,50 @@
-import net_pay from "./taxcalculator.js";
+let net_pay = document.getElementById("netpay").value;
 
-// console.log(net_pay);
+let bill_content = document.querySelector(".bill-content");
 
-let netSalary = parseInt(document.getElementById("net_salary").value);
-netSalary = net_pay;
+let travel = parseInt(document.getElementById("travel"));
+let rent = parseInt(document.getElementById("rent"));
+let entertainment = parseInt(document.getElementById("entertainment"));
+let food = parseInt(document.getElementById("food"));
+let shopping = parseInt(document.getElementById("shopping"));
 
-function calculate() {
-  document.getElementById("total").addEventListener("click", () => {
-    const output = document.getElementById("output");
-    output.value = +output.value;
+var bill_amount = [];
 
-    let totalSum = parseInt(document.getElementsByName("qty").value);
-    console.log(`totalSum: ${totalSum}`);
+// generate bills
+function grabBill() {
+  let bill_label = document.getElementById("bill-label").value;
+  let bill_value = document.getElementById("bill-amount").value;
 
-    var total = 0;
-    for (var i = 0; i < totalSum.length; i++) {
-      if (parseInt(totalSum[i].value)) {
-        total += parseInt(totalSum[i].value);
-      }
-    }
-    document.getElementsByClassName("total").value = total;
-    let bal = netSalary - totalSum;
-    console.log(bal);
-  });
+  let content = `
+    <tr>
+      <td>${bill_label}</td>
+      <td>${bill_value}</td>
+    </tr>
+  `;
+  return content;
 }
+
+// onclick add Bill
+let addBill = document.getElementById("add-bill");
+addBill.addEventListener("click", () => {
+  bill_amount.push(parseInt(document.getElementById("bill-amount").value));
+  let table_content = document.createElement("table");
+  table_content.innerHTML = grabBill();
+  bill_content.appendChild(table_content);
+  document.getElementById("bill-label").value = "";
+  document.getElementById("bill-amount").value = "";
+
+  document.getElementById("balance").value = computeBal(); //update balance
+});
+
+// compute balance
+function computeBal() {
+  let total_bill = 0;
+  for (let i = 0; i < bill_amount.length; i++) {
+    total_bill += bill_amount[i];
+  }
+  let balance = parseInt(net_pay) - parseInt(total_bill);
+  return balance;
+}
+
+document.getElementById("balance").value = computeBal();
