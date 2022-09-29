@@ -17,7 +17,7 @@ function computePAYE() {
   let paye = document.getElementById("paye").value;
   let payeInt = parseInt(paye);
   let percentage = payeInt / 100;
-  let res = percentage * gross_salary.value;
+  let res = parseFloat(percentage) * parseInt(gross_salary.value);
   return res;
 }
 
