@@ -1,4 +1,4 @@
-let net_pay = document.getElementById("netpay").value;
+let net_pay = document.getElementById("netpay");
 
 let bill_content = document.querySelector(".bill-content");
 
@@ -30,9 +30,6 @@ for (const [key, value] of Object.entries(bills)) {
 }
 bill_content.appendChild(table_content);
 
-// display balance
-document.getElementById("balance").value = computeBal();
-
 // replace table view upon new bill entry
 function newBill() {
   const initialTbl = bill_content.children[0]; // first child of bill-content
@@ -62,13 +59,27 @@ addBill.addEventListener("click", () => {
   document.getElementById("bill-amount").value = "";
 });
 
-// compute balance
-function computeBal() {
-  let total_bill = 0;
+var total_bill = 0;
+
+for (let i = 0; i < Object.keys(bills).length; i++) {
+  total_bill += parseFloat(Object.values(bills)[i]);
+}
+
+// compute total
+const computeTotal = () => {
+  let new_total = 0;
   for (let i = 0; i < Object.keys(bills).length; i++) {
-    total_bill += Object.values(bills)[i];
+    new_total += parseFloat(Object.values(bills)[i]);
   }
 
-  let balance = net_pay - total_bill;
+  return new_total;
+};
+
+// compute balance
+function computeBal() {
+  let balance = net_pay.value - computeTotal();
+  console.log(balance);
   return balance;
 }
+
+export default total_bill;

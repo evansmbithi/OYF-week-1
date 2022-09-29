@@ -1,3 +1,5 @@
+import total_bill from "./billmanager.js";
+
 // on gross entry, then user presses enter... Deductions are computed
 let gross_salary = document.getElementById("gross");
 
@@ -35,7 +37,8 @@ let total_deductions =
 // net_pay = parseInt(gross_salary.value) - total_deductions;
 
 gross_salary.addEventListener("keyup", (e) => {
-  let display_net = e.target.value - total_deductions;
-  parseFloat(document.getElementById("netpay").value) = display_net;
+  let display_net = parseFloat(e.target.value) - total_deductions;
+  document.getElementById("netpay").value = display_net;
   document.getElementById("net_salary").value = display_net; //display net_pay on bill-pane
+  document.getElementById("balance").value = display_net - total_bill;
 });
