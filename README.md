@@ -1,6 +1,6 @@
 # Tax Calculator
 
-This project was part of the <a href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm">Overcome-your-fear-Bootcamp</a> challenge series. The bootcamp involved weekly challenges that enabled participants collaborate in teams to design, build, and deploy a simple Tax Calculator.
+This project was part of the <a href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm">Overcome-your-fear-Bootcamp</a> challenge series. The bootcamp involved weekly challenges that enabled participants collaborate in teams to design, build, and deploy a simple Tax Calculator among other <a href="#">projects</a>.
 
 ## Week One
 
