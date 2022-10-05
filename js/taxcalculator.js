@@ -14,6 +14,9 @@ let health_relief = parseInt(document.getElementById("health_relief").value);
 let payeVal = computePAYE();
 let nhif = parseInt(document.getElementById("nhif").value);
 
+// criteria for PAYE
+// https://www.kra.go.ke/individual/filing-paying/types-of-taxes/paye
+
 // compute PAYE
 function computePAYE() {
   let paye = document.getElementById("paye").value;
@@ -40,5 +43,5 @@ gross_salary.addEventListener("keyup", (e) => {
   let display_net = parseFloat(e.target.value) - total_deductions;
   document.getElementById("netpay").value = display_net;
   document.getElementById("net_salary").value = display_net; //display net_pay on bill-pane
-  document.getElementById("balance").value = display_net - total_bill;
+  document.getElementById("balance").value = display_net - total_bill();
 });
