@@ -10,7 +10,7 @@
     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css' rel='stylesheet'/>
     <link rel="stylesheet" href="./css/nav-style.css">
     <script src="./js/taxcalculator.js" type="module"></script>
-    <!-- <script src="./js/billmanager.js" type="module"></script> -->    
+    <script src="./js/billmanager.js" type="module"></script>    
     
 </head>
 <body>
@@ -112,9 +112,10 @@
 
              </div>
       
-       <div class='total-expenses'> 
+       <div class='total-expenses'>
+        <label for="bill-label">Expense name</label> 
           <input id="bill-label" type='text' placeholder="Rent..." />  
-          
+        <label for="bill-amount">Expense Amount</label>
           <input id="bill-amount" type='text' placeholder="Sh. 50,000"/> 
         </div>
 
@@ -123,8 +124,9 @@
           
       
         <div class='total'>
-            <label >Balance </label>
-            <input type="text" id="balance"/> 
+            <label ><span>Balance</span> 
+              <input type="text" id="balance"/>
+            </label> 
         </div>
       
      </div>
