@@ -229,7 +229,7 @@ li {
   background-color: #fff;
   border: none;
   margin-left: 200px;
-  
+
   margin-top: -5%;
 }
 
@@ -246,7 +246,6 @@ li {
   margin-left: 60px;
   margin-top: 30px;
   /* justify-content: space-between; */
-  
 }
 
 .total-expenses input {
@@ -260,7 +259,6 @@ li {
   font-weight: bold;
   margin-top: 95px;
   margin-left: 100px;
- 
 }
 
 .total input {
@@ -397,8 +395,8 @@ button.deleteItm:hover {
     margin: 25px;
   }
   .Bills {
-    width: 300px;
-    height: 62.5rem;
+    width: 340px;
+    height: 63.5rem;
   }
 
   .bill-content {
@@ -407,7 +405,7 @@ button.deleteItm:hover {
   }
 
   .total {
-    margin-left: 20px;    
+    margin-left: 20px;
   }
 
   .total-expenses {
@@ -416,7 +414,7 @@ button.deleteItm:hover {
     width: 60%;
   }
 
-  .total-expenses input{
+  .total-expenses input {
     margin-left: 0;
   }
 }
