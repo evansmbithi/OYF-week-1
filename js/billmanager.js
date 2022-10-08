@@ -1,12 +1,11 @@
 let net_pay = document.getElementById("netpay");
-
 let bill_content = document.querySelector(".bill-content");
+let addBill = document.getElementById("add-bill");
 
 // default bill items
 const bills = {
   Rent: 0,
-  Transport: 0,
-  Entertainment: 0,
+  Shopping: 0,
   Food: 0,
 };
 
@@ -15,7 +14,7 @@ function display_content(key, value) {
   let content = `
     <tr>
       <td>${key}</td>
-      <td><input type="number" class="bill-value" value="${value}"/></td>
+      <td><input type="text" class="bill-value" value="${value}"/></td>
     </tr>
   `;
 
@@ -48,7 +47,6 @@ function newBill() {
   let table_content = document.createElement("table");
   table_content.id = "bill-table";
   for (const [key, value] of Object.entries(bills)) {
-    // table_content.innerHTML += grabBill(key, value);
     table_content.innerHTML += display_content(key, value);
   }
   bill_content.replaceChild(table_content, initialTbl); // replace initial table with new table
@@ -56,14 +54,12 @@ function newBill() {
 }
 
 // when btn 'Add Bill' is clicked
-let addBill = document.getElementById("add-bill");
 addBill.addEventListener("click", () => {
   // fetch bill item
   let bill_label = document.getElementById("bill-label").value;
   let bill_value = parseFloat(document.getElementById("bill-amount").value);
   bills[bill_label] = bill_value;
   newBill(); // replace child table with new entry
-  console.log(bills);
 
   // compute new balance
   document.getElementById("balance").value = computeBal();
@@ -73,7 +69,7 @@ addBill.addEventListener("click", () => {
   document.getElementById("bill-amount").value = "";
 });
 
-// display bills in a table
+// display bills in a table (IIFE)
 const displayBills = (() => {
   let table_content = document.createElement("table");
   table_content.id = "bill-table";
