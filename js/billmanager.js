@@ -1,6 +1,7 @@
 let net_pay = document.getElementById("netpay");
 let bill_content = document.querySelector(".bill-content");
 let addBill = document.getElementById("add-bill");
+let totalBalance = document.getElementById("balance");
 
 // default bill items
 const bills = {
@@ -15,6 +16,7 @@ function display_content(key, value) {
     <tr>
       <td>${key}</td>
       <td><input type="text" class="bill-value" value="${value}"/></td>
+      <td><button class="deleteItm">x</button></td>
     </tr>
   `;
 
@@ -35,7 +37,7 @@ function editBill() {
         let value = cells[1].children[0].value;
         bills[key] = value;
       }
-      document.getElementById("balance").value = computeBal();
+      displayBal();
     });
   }
 }
@@ -51,6 +53,7 @@ function newBill() {
   }
   bill_content.replaceChild(table_content, initialTbl); // replace initial table with new table
   editBill();
+  deleteItem();
 }
 
 // when btn 'Add Bill' is clicked
@@ -62,7 +65,7 @@ addBill.addEventListener("click", () => {
   newBill(); // replace child table with new entry
 
   // compute new balance
-  document.getElementById("balance").value = computeBal();
+  displayBal();
 
   // clear bill input fields
   document.getElementById("bill-label").value = "";
@@ -79,6 +82,7 @@ const displayBills = (() => {
 
   bill_content.appendChild(table_content);
   editBill();
+  deleteItem();
 })();
 
 // compute total bill
@@ -91,10 +95,25 @@ const total_bill = () => {
   return total;
 };
 
-// compute display balance
-function computeBal() {
+/**
+ * compute display balance
+ *  color-code balance
+ *  warning (color coded , preferably red) if balance
+ *  after bill calculations is below 20% of total net
+ */
+function displayBal() {
   let balance = net_pay.value - total_bill();
-  return balance;
+  if (balance < 0.2 * net_pay.value) {
+    totalBalance.style.color = "red";
+  } else {
+    totalBalance.style.color = "green";
+  }
+
+  if (balance > 0 && balance !== NaN) {
+    totalBalance.value = balance;
+  } else {
+    totalBalance.value = 0;
+  }
 }
 
 export default total_bill;

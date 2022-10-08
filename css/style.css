@@ -315,6 +315,18 @@ button {
   color: #000;
 }
 
+button.deleteItm {
+  color: red;
+  border: none;
+  background-color: transparent;
+  margin-top: -5px;
+  width: 10px;
+}
+
+button.deleteItm:hover {
+  text-decoration: underline;
+}
+
 .footer {
   text-align: center;
   font-weight: bold;
