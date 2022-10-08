@@ -42,6 +42,24 @@ function editBill() {
   }
 }
 
+function deleteItem() {
+  let billItem = document.querySelectorAll(".deleteItm");
+  for (let i = 0; i < billItem.length; i++) {
+    billItem[i].addEventListener("click", () => {
+      let table = document.getElementById("bill-table");
+      let rows = table.rows;
+
+      let row = rows[i];
+      let cells = row.cells;
+      let key = cells[0].innerHTML;
+      delete bills[key];
+
+      displayBal();
+      newBill();
+    });
+  }
+}
+
 // replace table view upon new bill entry
 function newBill() {
   const initialTbl = bill_content.children[0]; // first child of bill-content
