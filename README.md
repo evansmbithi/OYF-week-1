@@ -4,7 +4,7 @@ This project was part of the <a href="https://www.meliora.co.ke/articles/nvrjgtn
 
 ## Week One
 
-Created a responsive UI for tax calculation app for:
+Created a responsive UI for:
 
 - Large screen UI
 - Mobile screen UI <br/>
@@ -17,6 +17,7 @@ Technologies used:
 
 ## Week Two
 
-Containerized the web app with docker and pushed to dockerhub.
+Containerized the web app with docker and pushed to
+<a href="https://hub.docker.com/repository/docker/mbithi/oyf-week-one">dockerhub.</a>
 
 ## Week Three
