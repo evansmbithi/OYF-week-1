@@ -119,19 +119,19 @@ const total_bill = () => {
  *  warning (color coded , preferably red) if balance
  *  after bill calculations is below 20% of total net
  */
-function displayBal() {
-  let balance = net_pay.value - total_bill();
-  if (balance < 0.2 * net_pay.value) {
+const displayBal = (netSal = net_pay.value) => {
+  let balance = netSal - total_bill();
+  if (balance < 0.2 * netSal) {
     totalBalance.style.color = "red";
   } else {
     totalBalance.style.color = "green";
   }
 
   if (balance > 0 && balance !== NaN) {
-    totalBalance.value = balance;
+    return (totalBalance.value = balance);
   } else {
-    totalBalance.value = 0;
+    return (totalBalance.value = 0);
   }
-}
+};
 
-export default total_bill;
+export default displayBal;

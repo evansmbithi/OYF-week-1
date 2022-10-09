@@ -249,7 +249,7 @@ li {
 }
 
 .total-expenses input {
-  margin: 0 20px;
+  margin: -5px 20px;
   border: solid 3px #1cb484;
   border-radius: 5px;
 }
@@ -266,7 +266,6 @@ li {
   background-color: #fff;
   border: none;
   margin-left: 80px;
-  display: flex;
   margin-top: -18px;
   max-width: 80rem;
   color: #1cb484;
