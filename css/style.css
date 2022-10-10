@@ -33,6 +33,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   font-size: 20px;
+  margin-left: -46px;
 }
 .links li a {
   text-decoration: none;
@@ -57,18 +58,10 @@ li {
   margin-bottom: -40px;
 }
 
-.Tax {
-  background-color: #1cb484;
-  width: 48%;
-  margin: auto;
-  font-size: 14px;
-  margin-top: -40px;
-}
-
 .total-income {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: bold;
-  margin-top: 95px;
+  /* margin-top: 95px; */
   margin-left: 100px;
   padding: 3px;
 }
@@ -110,14 +103,22 @@ li {
   margin-bottom: 100px;
 }
 
+.Tax {
+  width: 48%;
+  margin: auto;
+  font-size: 14px;
+  /* margin-top: -40px; */
+}
+
 .bills-pane {
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  left: 0;
-  margin-top: -192px;
+  left: 0; */
+  /* margin-top: -192px; */
   width: 100%;
   opacity: 0;
   visibility: hidden;
+  margin-bottom: 156px;
 }
 
 .bills-pane:target {
@@ -126,10 +127,19 @@ li {
   z-index: 1000;
 }
 
+.bills-pane:target + .deductions-pane {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .deductions-pane {
-  display: grid;
-  grid-template-rows: 1fr 50px;
-  gap: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* margin-top: 192px; */
+  height: 562.4px;
+  padding-right: 25px;
+  background-color: #1cb484;
 }
 
 .Deductions {
@@ -160,6 +170,23 @@ li {
 
 .Deductions label > span {
   width: 10rem;
+}
+
+.deductions-footer {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.bill-btn {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  border: none;
+  font-weight: bolder;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 10px;
+  /* margin: 40px; */
 }
 
 .Expenses {
@@ -195,7 +222,8 @@ li {
   background-color: wheat;
   min-height: 35rem;
   padding-bottom: 15px;
-  margin-bottom: 150px;
+
+  /* margin-bottom: 150px; */
   /*width: 50%; */
   /* margin: auto; */
   /* margin-top: -40px; */
@@ -289,25 +317,6 @@ li {
   margin-top: -5%;
 }
 
-.deductions-footer {
-  position: relative;
-}
-
-.bill-btn {
-  background-color: #fff;
-  color: #000;
-  text-decoration: none;
-  border: none;
-  font-weight: bolder;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 10px;
-  margin: 0 40px;
-  position: absolute;
-  top: 0;
-  right: 50px;
-}
-
 button {
   background-color: #000;
   color: #fff;
@@ -362,10 +371,7 @@ button.deleteItm:hover {
   align-items: center;
   justify-content: center;
   padding: 30px;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  z-index: 1000;
+  /* z-index: 1000; */
 }
 
 .collaborators a {
@@ -380,7 +386,7 @@ button.deleteItm:hover {
 
 /* Responsive logic for smaller screens */
 
-@media (max-width: 1110px) {
+@media (max-width: 1280px) {
   /* deductions-pane */
   .Deductions label > input {
     /* margin: 20px; */
@@ -389,17 +395,18 @@ button.deleteItm:hover {
   .Deductions {
     margin-left: 0;
   }
+
+  .deductions-pane,
+  .Tax {
+    width: 340px;
+  }
+
   .total-income {
-    margin-top: 95px;
     margin-left: 40px;
   }
 
   .total-income input {
     width: 10rem;
-  }
-
-  .Tax {
-    width: 340px;
   }
 
   /* bills-pane */
@@ -416,10 +423,16 @@ button.deleteItm:hover {
     margin-left: 10px;
   }
   .net-income input {
-    margin: 25px;
+    margin: 0 25px;
   }
+
+  .bills-pane {
+    margin-bottom: 0;
+  }
+
   .Bills {
     width: 340px;
+    /* margin-left: 30px; */
     /* min-height: 54.5rem; */
   }
 
@@ -447,8 +460,17 @@ button.deleteItm:hover {
 }
 
 /* for larger screens */
-@media (min-width: 1110px) {
+@media (min-width: 1280px) {
+  .deductions-pane {
+    margin-left: 47px;
+  }
   .Deductions {
     width: 30rem;
+  }
+
+  .footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
   }
 }

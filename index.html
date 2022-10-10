@@ -38,7 +38,43 @@
 
     </ul>
 
-    <main class='Tax'>
+<main>   
+    <div class="main-area Tax">
+  <!-- Bills-pane START -->
+    <div class="bills-pane" id="bills-pane">
+      <div class='Bills'>
+
+        <div class='net-income'>
+          <h1>Bill Manager</h1>
+          <label >Net Salary</label>
+          <input type='text' id="net_salary" name = 'text' amount = 'Ksh' >  <br></br>  <br></br>      
+        </div>
+        
+        <div class="bill-content">              
+
+        </div>
+      
+       <div class='total-expenses'> 
+        <label for="bill-label">Enter Bill:</label>
+          <input id="bill-label" type='text' placeholder="Transport..." />  
+          <label for="bill-amount">Enter Amount:</label>
+          <input id="bill-amount" type='text' placeholder="Sh. 50,000"/> 
+        </div>
+
+        <button id='add-bill'>Add</button>  
+          
+      
+        <div class='total'>
+            <label >Balance </label>
+            <input type="text" id="balance"/> 
+        </div>
+      
+      </div>
+    </div>
+    <!-- Bills-pane END -->
+
+<!-- deductions-pane START -->
+      <div id="deductions-pane" class="deductions-pane">
         <div class='total-income'>
           <h1>Gross Salary</h1>
           <label class="gross-area">
@@ -47,9 +83,6 @@
           </label>  <br>    
   
         </div>
-
-      <div class="main-area">
-      <div id="deductions-pane" class="deductions-pane">
         <div class='Deductions' >
           <label for="netpay">
             <span>Netpay</span>  
@@ -96,54 +129,24 @@
           </div>
           
        </div>
+<!-- deductions-pane END -->
 
-
-       <!-- Bills-pane -->
-    <div class="bills-pane" id="bills-pane">
-      <div class='Bills'>
-
-        <div class='net-income'>
-          <h1>Bill Manager</h1>
-          <label >Net Salary</label>
-          <input type='text' id="net_salary" name = 'text' amount = 'Ksh' >  <br></br>  <br></br>      
-        </div>
-        
-        <div class="bill-content">              
-
-        </div>
-      
-       <div class='total-expenses'> 
-        <label for="bill-label">Enter Bill:</label>
-          <input id="bill-label" type='text' placeholder="Transport..." />  
-          <label for="bill-amount">Enter Amount:</label>
-          <input id="bill-amount" type='text' placeholder="Sh. 50,000"/> 
-        </div>
-
-        <button id='add-bill'>Add</button>  
-          
-      
-        <div class='total'>
-            <label >Balance </label>
-            <input type="text" id="balance"/> 
-        </div>
-      
-      </div>
-    </div>
+     
   </div>
   </main>    
 
-      <footer class="footer">
-          <div class="collaborators">
-          
-            <p> Project by Go-Getters (Group 7)</p>
-            <!-- <p><i class='fa fa-github'></i> <a target="_blank" href="https://github.com/evansmbithi">Evans Mbithi</a></p>
-            <p><i class='fa fa-github'></i> <a target="_blank" href="https://github.com/Awuor-Nancy">Nancy Awuor</a></p> -->
-            
-            <div>
-              Powered by<a target="_blank" href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm"> #natujenge</a>
-            </div>
+  <footer class="footer">
+      <div class="collaborators">
+      
+        <p> Project by Go-Getters (Group 7)</p>
+        <!-- <p><i class='fa fa-github'></i> <a target="_blank" href="https://github.com/evansmbithi">Evans Mbithi</a></p>
+        <p><i class='fa fa-github'></i> <a target="_blank" href="https://github.com/Awuor-Nancy">Nancy Awuor</a></p> -->
+        
+        <div>
+          Powered by<a target="_blank" href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm"> #natujenge</a>
         </div>
-    </footer>
-  
+    </div>
+</footer>
+
 </body>
 </html>
