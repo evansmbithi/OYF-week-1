@@ -59,7 +59,7 @@ li {
 
 .Tax {
   background-color: #1cb484;
-  width: 60%;
+  width: 48%;
   margin: auto;
   font-size: 14px;
   margin-top: -40px;
@@ -115,7 +115,6 @@ li {
   top: 0;
   left: 0;
   margin-top: -192px;
-
   width: 100%;
   opacity: 0;
   visibility: hidden;
@@ -144,7 +143,8 @@ li {
   padding: 5px;
   background-color: transparent;
   border: none;
-  /* margin-left: 40px; */
+  border-bottom: solid 1px #000;
+  width: 100px;
 }
 
 .Deductions label {
@@ -155,6 +155,7 @@ li {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  gap: 3px;
 }
 
 .Deductions label > span {
@@ -192,7 +193,7 @@ li {
 
 .Bills {
   background-color: wheat;
-  min-height: 34.5rem;
+  min-height: 35rem;
   padding-bottom: 15px;
   margin-bottom: 150px;
   /*width: 50%; */
@@ -264,6 +265,7 @@ li {
   margin: -5px 20px;
   border: solid 3px #1cb484;
   border-radius: 5px;
+  width: 150px;
 }
 
 .total {
@@ -303,7 +305,7 @@ li {
   margin: 0 40px;
   position: absolute;
   top: 0;
-  right: 100px;
+  right: 50px;
 }
 
 button {
@@ -440,6 +442,13 @@ button.deleteItm:hover {
     margin-left: 0;
   }
   .bill-btn {
-    right: 100px;
+    right: 0;
+  }
+}
+
+/* for larger screens */
+@media (min-width: 1110px) {
+  .Deductions {
+    width: 30rem;
   }
 }

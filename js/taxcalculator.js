@@ -48,7 +48,7 @@ function display(net) {
 
 gross_salary.addEventListener("keyup", (e) => {
   let net_pay = parseFloat(e.target.value) - total_deductions;
-  document.getElementById("netpay").value = display(net_pay);
+  document.getElementById("netpay").value = net_pay;
   document.getElementById("net_salary").value = display(net_pay); //display net_pay on bill-pane
   document.getElementById("balance").value = displayBal(net_pay); //display balance on bill-pane
 });

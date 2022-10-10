@@ -16,7 +16,7 @@ function display_content(key, value) {
   let content = `
     <tr>
       <td>${key}</td>
-      <td><input type="text" class="bill-value" placeholder="Enter amount" value="${val}"/></td>
+      <td><input type="text" class="bill-value" placeholder="Enter amount" value="${value}"/></td>
       <td><button class="deleteItm">x</button></td>
     </tr>
   `;
