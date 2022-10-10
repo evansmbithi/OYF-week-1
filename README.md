@@ -19,6 +19,6 @@ Technologies used:
 
 Containerized the web app with docker and pushed to
 <a href="https://hub.docker.com/repository/docker/mbithi/oyf-week-one">dockerhub.</a>
-See it live <a href="http://157.230.13.246:3539/">here</a>
+See it live <a href="http://157.230.13.246/group7/">here</a>
 
 ## Week Three
