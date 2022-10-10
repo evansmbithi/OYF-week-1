@@ -25,8 +25,8 @@
       <div class="menu">
         <ul class="list">
           <li><a href="#">Home</a></li>
-          <li><a target="_blank" href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm">About Bootcamp</a></li>
-          <li><a href="./team.html">The team</a></li>
+          <li><a target="_blank" href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm">Bootcamp</a></li>
+          <li><a href="./team.html">Team</a></li>
         </ul>
       </div>
     </nav>
@@ -41,10 +41,12 @@
     <main class='Tax'>
         <div class='total-income'>
           <h1>Gross Salary</h1>
-          <label >Ksh</label>
-          <input type='text' id="gross" name = 'text' amount = 'Ksh' >  <br></br>  <br></br>
+          <label class="gross-area">
+            <span class="gross-currency">Ksh</span>
+            <input type='text' id="gross" name = 'text' placeholder="Enter Gross Amount" >  
+          </label>  <br>    
   
-          </div>
+        </div>
 
       <div class="main-area">
       <div id="deductions-pane" class="deductions-pane">
@@ -52,45 +54,44 @@
           <label for="netpay">
             <span>Netpay</span>  
             <input type='text' id="netpay" name = 'text' placeholder='Ksh' amount='Ksh'></label>
-          <!-- <input type='text' id="netpay" name = 'text' placeholder='Ksh' amount='Ksh' value=""> <br></br> <br></br> -->
   
           <label for="nssf">
            <span>NSSF Contribution</span>  
             <input type='text' id='nssf' name = 'text' placeholder='Ksh' amount= 'Ksh' value="200" disabled></label>
-          <!-- <input type='text' id='nssf' name = 'text' placeholder='Ksh' amount= 'Ksh' value="200" disabled>  <br></br>  <br></br> -->
+          
   
           <label for="taxable">
             <span>Taxable Income</span>  
-            <input type='text' id="taxable" name = 'text' placeholder='Ksh' amount='Ksh' value="20000" disabled></label>
-          <!-- <input type='text' id="taxable" name = 'text' placeholder='Ksh' amount='Ksh' value="20000" disabled>  <br></br>  <br></br> -->
+            <input type='text' id="taxable" name = 'text' placeholder='Ksh' amount='Ksh' value="24000" disabled></label>
+          
   
           <label for="before_relief">
            <span>Tax Before Relief</span>  
            <input type='text' id="before_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="2500" disabled></label>
-          <!-- <input type='text' id="before_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="2500" disabled>  <br></br>  <br></br> -->
+          
   
           <label for="personal_relief">
             <span>Personal Relief</span>  
             <input type='text' id="personal_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="500" disabled></label>
-          <!-- <input type='text' id="personal_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="500" disabled>  <br></br>  <br></br> -->
+          
   
           <label for="health_relief">
             <span>Health Insurance Relief</span>  
             <input type='text' id="health_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="10000" disabled></label>
-          <!-- <input type='text' id="health_relief" name = 'text' placeholder='Ksh' amount='Ksh' value="10000" disabled>  <br></br>  <br></br> -->
+          
   
           <label for="paye">
             <span>PAYE</span>  
             <input type='text' id="paye" name = 'text' placeholder='Ksh' amount='Ksh' value="15" disabled></label>
-          <!-- <input type='text' id="paye" name = 'text' placeholder='Ksh' amount='Ksh' value="15" disabled>   <br></br>  <br></br> -->
+          
   
           <label for="nhif">
             <span>NHIF Contribution</span>  
             <input type='text' id="nhif" name = 'text' placeholder='Ksh' amount='Ksh' value="1000" disabled></label>
-          <!-- <input type='text' id="nhif" name = 'text' placeholder='Ksh' amount='Ksh' value="1000" disabled>    <br></br>  <br></br> -->
+          
        
           </div>
-          <div style="text-align: right;">
+          <div class="deductions-footer">
             <a class="bill-btn" href="#bills-pane">Manage bills</a>
           </div>
           
@@ -98,19 +99,18 @@
 
 
        <!-- Bills-pane -->
-          <div class="bills-pane" id="bills-pane">
-            <div class='Bills'>
-       
-              <div class='net-income'>
-                  <h1>Bill Manager</h1>
-              <label >Net Salary</label>
-             <input type='text' id="net_salary" name = 'text' amount = 'Ksh' >  <br></br>  <br></br>
-      
-             </div>
-             
-             <div class="bill-content">              
+    <div class="bills-pane" id="bills-pane">
+      <div class='Bills'>
 
-             </div>
+        <div class='net-income'>
+          <h1>Bill Manager</h1>
+          <label >Net Salary</label>
+          <input type='text' id="net_salary" name = 'text' amount = 'Ksh' >  <br></br>  <br></br>      
+        </div>
+        
+        <div class="bill-content">              
+
+        </div>
       
        <div class='total-expenses'> 
         <label for="bill-label">Enter Bill:</label>
@@ -120,7 +120,6 @@
         </div>
 
         <button id='add-bill'>Add</button>  
-        <!-- <button class="computeBal">Compute</button> -->
           
       
         <div class='total'>
@@ -128,18 +127,17 @@
             <input type="text" id="balance"/> 
         </div>
       
-     </div>
-
+      </div>
     </div>
-    </div>
+  </div>
   </main>    
 
       <footer class="footer">
           <div class="collaborators">
           
-            <p> project done by Go-Getters </p>
-            <p><i class='fa fa-github'></i> <a target="_blank" href="https://github.com/evansmbithi">Evans Mbithi</a></p>
-            <p><i class='fa fa-github'></i> <a target="_blank" href="https://github.com/Awuor-Nancy">Nancy Awuor</a></p>
+            <p> Project by Go-Getters (Group 7)</p>
+            <!-- <p><i class='fa fa-github'></i> <a target="_blank" href="https://github.com/evansmbithi">Evans Mbithi</a></p>
+            <p><i class='fa fa-github'></i> <a target="_blank" href="https://github.com/Awuor-Nancy">Nancy Awuor</a></p> -->
             
             <div>
               Powered by<a target="_blank" href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm"> #natujenge</a>

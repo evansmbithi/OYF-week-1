@@ -65,6 +65,45 @@ li {
   margin-top: -40px;
 }
 
+.total-income {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 95px;
+  margin-left: 100px;
+  padding: 3px;
+}
+.total-income button {
+  color: #1cb484;
+  margin-right: 510px;
+  position: absolute;
+  margin-top: -2px;
+}
+
+.total-income h1 {
+  padding: 4px;
+  color: whitesmoke;
+}
+
+.total-income input {
+  padding: 5px;
+  background-color: #fff;
+  border: none;
+  width: 20rem;
+}
+
+.gross-area {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 0;
+}
+
+.gross-currency {
+  background-color: #bbbbbb;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
 .main-area {
   position: relative;
   /* min-height: 30rem; */
@@ -76,6 +115,7 @@ li {
   top: 0;
   left: 0;
   margin-top: -192px;
+
   width: 100%;
   opacity: 0;
   visibility: hidden;
@@ -102,11 +142,9 @@ li {
 
 .Deductions input {
   padding: 5px;
-  background-color: #fff;
+  background-color: transparent;
   border: none;
-  /* margin-left: 240px;
-  display: flex; */
-  /* margin-top: -5%; */
+  /* margin-left: 40px; */
 }
 
 .Deductions label {
@@ -114,8 +152,9 @@ li {
   font-weight: bold;
   margin: 5px 20px;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .Deductions label > span {
@@ -151,38 +190,11 @@ li {
   width: 10rem;
 }
 
-.total-income {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: bold;
-  margin-top: 95px;
-  margin-left: 80px;
-}
-.total-income button {
-  color: #1cb484;
-  margin-right: 510px;
-  position: absolute;
-  margin-top: -2px;
-}
-
-.total-income h1 {
-  padding: 4px;
-  color: whitesmoke;
-}
-
-.total-income input {
-  padding: 5px;
-  background-color: #fff;
-  border: none;
-  margin-left: 114px;
-  display: flex;
-
-  width: 60%;
-}
-
 .Bills {
   background-color: wheat;
   min-height: 34.5rem;
   padding-bottom: 15px;
+  margin-bottom: 150px;
   /*width: 50%; */
   /* margin: auto; */
   /* margin-top: -40px; */
@@ -275,6 +287,10 @@ li {
   margin-top: -5%;
 }
 
+.deductions-footer {
+  position: relative;
+}
+
 .bill-btn {
   background-color: #fff;
   color: #000;
@@ -285,6 +301,9 @@ li {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding: 10px;
   margin: 0 40px;
+  position: absolute;
+  top: 0;
+  right: 100px;
 }
 
 button {
@@ -336,13 +355,15 @@ button.deleteItm:hover {
   margin-top: 30px;
   bottom: 0;
   background-color: rgb(6, 6, 6);
-  height: 50vh;
+  /* height: 50vh; */
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  padding: 30px;
+  width: 100%;
+  position: fixed;
   bottom: 0;
-  left: 0;
+  z-index: 1000;
 }
 
 .collaborators a {
@@ -360,7 +381,7 @@ button.deleteItm:hover {
 @media (max-width: 1110px) {
   /* deductions-pane */
   .Deductions label > input {
-    margin: 20px;
+    /* margin: 20px; */
     justify-content: flex-start;
   }
   .Deductions {
@@ -368,11 +389,13 @@ button.deleteItm:hover {
   }
   .total-income {
     margin-top: 95px;
-    margin-left: 10px;
+    margin-left: 40px;
   }
+
   .total-income input {
-    margin-left: 25px;
+    width: 10rem;
   }
+
   .Tax {
     width: 340px;
   }
@@ -395,7 +418,7 @@ button.deleteItm:hover {
   }
   .Bills {
     width: 340px;
-    height: 63.5rem;
+    /* min-height: 54.5rem; */
   }
 
   .bill-content {
@@ -415,5 +438,8 @@ button.deleteItm:hover {
 
   .total-expenses input {
     margin-left: 0;
+  }
+  .bill-btn {
+    right: 100px;
   }
 }

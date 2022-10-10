@@ -12,10 +12,11 @@ const bills = {
 
 // bill content
 function display_content(key, value) {
+  let val = value == 0 ? "" : value;
   let content = `
     <tr>
       <td>${key}</td>
-      <td><input type="text" class="bill-value" value="${value}"/></td>
+      <td><input type="text" class="bill-value" placeholder="Enter amount" value="${val}"/></td>
       <td><button class="deleteItm">x</button></td>
     </tr>
   `;
