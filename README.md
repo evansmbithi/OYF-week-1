@@ -1,4 +1,4 @@
-# Tax Calculator
+# <a href="" target="_blank">Tax Calculator</a>
 
 This project was part of the <a href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm">Overcome-your-fear-Bootcamp</a> challenge series. The bootcamp involved weekly challenges that enabled participants collaborate in teams to design, build, and deploy a simple Tax Calculator among other <a href="#">projects</a>.
 
@@ -19,5 +19,6 @@ Technologies used:
 
 Containerized the web app with docker and pushed to
 <a href="https://hub.docker.com/repository/docker/mbithi/oyf-week-one">dockerhub.</a>
+See it live <a href="http://157.230.13.246:3539/">here</a>
 
 ## Week Three
