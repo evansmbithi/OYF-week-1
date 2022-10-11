@@ -20,5 +20,6 @@ COPY ./db.sql /docker-entrypoint-initdb.d/
 # opens up mysql>
 # you can now execute SQL scripts
 # mysql> SHOW DATABASES;
+# USE db_name;
 # SHOW TABLES;
 # SELECT * FROM tbl_name;
