@@ -23,8 +23,8 @@ Containerized the web app with docker and pushed to
 
 ## Week Three
 
-Developed an API to compute tax deductions based on KRA specifications. <br><br>
-Also learnt to initialize and run a MySQL instance on docker. From which we were able to create and query a DB from the commandline.
+Developed an API with Springboot to compute tax deductions based on KRA specifications. <br><br>
+Also learnt to initialize and run MySQL instance on docker. From which we were able to create and query a DB from the commandline.
 
 ## Week Four
 
